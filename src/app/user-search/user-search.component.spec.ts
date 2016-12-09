@@ -1,7 +1,5 @@
 /* tslint:disable:no-unused-variable */
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { By } from '@angular/platform-browser';
-import { DebugElement } from '@angular/core';
 
 import { UserSearchComponent } from './user-search.component';
 
@@ -24,5 +22,9 @@ describe('UserSearchComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should have users defined', () => {
+    expect(component.users).toBeTruthy();
   });
 });
