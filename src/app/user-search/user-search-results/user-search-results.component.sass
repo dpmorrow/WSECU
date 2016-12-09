@@ -1,9 +1,10 @@
 .user-search-results
-  &:nth-child(even)
-    background: #CCC
-  &:nth-child(odd)
-    background: #FFF
-
+  app-user-search-result
+    &:nth-child(even)
+      /deep/ .user-search-result div
+        background: #f2f2f2
+    &:nth-child(odd)
+      background: #FFF
 
 @media screen and (max-width: 600px)
   .user-search-result-header

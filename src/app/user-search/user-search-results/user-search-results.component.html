@@ -5,9 +5,6 @@
     </div>
     <hr class="span12">
 </div>
-<ul>
-  <li class="user-search-result" *ngFor="let user of users">
-    <div class="user-name span6">{{ user.name }}</div>
-    <div class="user-email span6">{{ user.email }}</div>
-  </li>
+<ul class="user-search-results">
+  <app-user-search-result *ngFor="let user of users" [user]="user"></app-user-search-result>
 </ul>
