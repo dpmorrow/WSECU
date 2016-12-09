@@ -28,8 +28,8 @@ export class UserSearchService {
   }
 
   executeSearch(search: string) {
-    search = search.toUpperCase();
     this.searchTermSource.next(search);
+    search = search.toUpperCase();
 
     var users = this.rawUsers.filter(u => {
       return u.name.toUpperCase().includes(search) || u.email.toUpperCase().includes(search);

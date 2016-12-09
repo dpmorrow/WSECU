@@ -137,7 +137,7 @@ header h1{
 #container{
   width: 80%;
   border: 2px solid black;
-  padding: 75px 50px;
+  padding: 75px 50px 20px;
   min-width: 250px;
 }
 
@@ -172,7 +172,11 @@ header h1{
 
   #container, .inner{
     width: 60%;
-    padding: 50px 30px;
+  }
+
+  #container {
+    padding: 40px 30px 40px;
+    border: 3px solid black;
   }
 
   .span6 {

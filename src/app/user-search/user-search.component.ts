@@ -13,18 +13,25 @@ export class UserSearchComponent implements OnInit {
   rawUsers: User[]
   totalUsers: number;
   totalMatchingUsers: number;
-  subscription: Subscription;
+  searchTerm: string;
+  userResultsSubscription: Subscription;
+  searchTermSubscription: Subscription;
   @Input() search: string;
 
   constructor(private userSearchService: UserSearchService) {
     this.users = this.rawUsers = userSearchService.getRawUsers();
     this.totalUsers = this.rawUsers.length;
 
-
-    this.subscription = userSearchService.userResults$.subscribe(
+    this.userResultsSubscription = userSearchService.userResults$.subscribe(
         userResults => {
           this.users = userResults;
           this.totalMatchingUsers = userResults.length;
+        }
+    )
+
+    this.searchTermSubscription = userSearchService.searchTerm$.subscribe(
+        searchTerm => {
+          this.searchTerm = searchTerm;
         }
     )
   }
