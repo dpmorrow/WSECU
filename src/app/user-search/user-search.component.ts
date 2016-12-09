@@ -7,7 +7,8 @@ import {User} from "./models/User";
   styleUrls: ['./user-search.component.sass']
 })
 export class UserSearchComponent implements OnInit {
-  @Input() users: User[];
+  users: User[];
+  @Input() search: string;
 
   constructor() {
     this.users = [{ name: 'user1', email: 'user1'},{ name: 'user2', email: 'user2'}];
