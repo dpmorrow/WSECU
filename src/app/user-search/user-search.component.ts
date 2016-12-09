@@ -1,5 +1,7 @@
 import {Component, OnInit, Input} from '@angular/core';
 import {User} from "./models/User";
+import {UserSearchService} from "./user-search-service/user-search-service";
+import {Subscription} from "rxjs";
 
 @Component({
   selector: 'app-user-search',
@@ -8,16 +10,23 @@ import {User} from "./models/User";
 })
 export class UserSearchComponent implements OnInit {
   users: User[];
+  rawUsers: User[]
+  totalUsers: number;
+  totalMatchingUsers: number;
+  subscription: Subscription;
   @Input() search: string;
 
-  constructor() {
-    this.users = [
-      { name: 'Jane Doe', email: 'JaneDoe@mail.com'},
-      { name: 'John Doe', email: 'JohnDoe@mail.com'},
-      { name: 'Joan Doe', email: 'JoanDoe@mail.com'},
-      { name: 'James Doe', email: 'JamesDoe@mail.com'},
-      { name: 'Jess Doe', email: 'JessDoe@mail.com'}
-    ];
+  constructor(private userSearchService: UserSearchService) {
+    this.users = this.rawUsers = userSearchService.getRawUsers();
+    this.totalUsers = this.rawUsers.length;
+
+
+    this.subscription = userSearchService.userResults$.subscribe(
+        userResults => {
+          this.users = userResults;
+          this.totalMatchingUsers = userResults.length;
+        }
+    )
   }
 
   ngOnInit() {
