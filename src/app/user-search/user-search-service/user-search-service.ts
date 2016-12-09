@@ -35,7 +35,7 @@ export class UserSearchService {
       return u.name.toUpperCase().includes(search) || u.email.toUpperCase().includes(search);
     });
 
-    this.userResultsSource.next(users)
+    this.userResultsSource.next(users);
     // TODO: DO SEARCH
   }
 }
