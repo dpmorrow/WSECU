@@ -9,8 +9,8 @@ import {Subscription} from "rxjs";
   styleUrls: ['./user-search.component.sass']
 })
 export class UserSearchComponent implements OnInit {
-  users: User[];
-  rawUsers: User[]
+  users: User[] = [];
+  rawUsers: User[] = [];
   totalUsers: number;
   totalMatchingUsers: number;
   searchTerm: string;
@@ -19,11 +19,11 @@ export class UserSearchComponent implements OnInit {
   @Input() search: string;
 
   constructor(private userSearchService: UserSearchService) {
-    this.users = this.rawUsers = userSearchService.getRawUsers();
-    this.totalUsers = this.rawUsers.length;
-
     this.userResultsSubscription = userSearchService.userResults$.subscribe(
         userResults => {
+          if(this.rawUsers === [] && (userResults !== [] || userResults.length > 0)) {
+            this.rawUsers = userResults;
+          }
           this.users = userResults;
           this.totalMatchingUsers = userResults.length;
         }
@@ -37,6 +37,7 @@ export class UserSearchComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.userSearchService.initialize();
   }
 
 }
