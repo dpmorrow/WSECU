@@ -22,4 +22,8 @@ describe('UserSearchResultComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should have users defined', () => {
+    expect(component.users).toBeTruthy();
+  });
 });
