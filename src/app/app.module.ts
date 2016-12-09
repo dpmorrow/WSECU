@@ -9,6 +9,7 @@ import { UserSearchResultsComponent } from './user-search/user-search-results/us
 import { UserSearchResultComponent } from './user-search/user-search-results/user-search-result/user-search-result.component';
 import { UserSearchInputComponent } from './user-search/user-search-input/user-search-input.component';
 import { UserSearchService } from './user-search/user-search-service/user-search-service';
+import { UserSearchTotalsComponent } from './user-search/user-search-totals/user-search-totals.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { UserSearchService } from './user-search/user-search-service/user-search
     UserSearchComponent,
     UserSearchResultsComponent,
     UserSearchResultComponent,
-    UserSearchInputComponent
+    UserSearchInputComponent,
+    UserSearchTotalsComponent
   ],
   imports: [
     BrowserModule,
