@@ -11,7 +11,13 @@ export class UserSearchComponent implements OnInit {
   @Input() search: string;
 
   constructor() {
-    this.users = [{ name: 'Jane Doe', email: 'JaneDoe@mail.com'},{ name: 'John Doe', email: 'JohnDoe@mail.com'}];
+    this.users = [
+      { name: 'Jane Doe', email: 'JaneDoe@mail.com'},
+      { name: 'John Doe', email: 'JohnDoe@mail.com'},
+      { name: 'Joan Doe', email: 'JoanDoe@mail.com'},
+      { name: 'James Doe', email: 'JamesDoe@mail.com'},
+      { name: 'Jess Doe', email: 'JessDoe@mail.com'}
+    ];
   }
 
   ngOnInit() {

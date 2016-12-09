@@ -22,7 +22,8 @@ $line-height: 1.5em;
 }
 
 .span1, .span2, .span3, .span4, .span5, .span6, .span7, .span8, .span9, .span10, .span11, .span12{
-    float:left;
+    display: inline-block;
+    //float:left;
     -webkit-box-sizing:border-box;
     -moz-box-sizing:border-box;
     box-sizing:border-box;
@@ -134,8 +135,10 @@ header h1{
 }
 
 #container{
-  clear: both;
-  padding-top: 20px;
+  width: 80%;
+  border: 2px solid black;
+  padding: 75px 50px;
+  min-width: 250px;
 }
 
 .alt{
@@ -168,8 +171,8 @@ header h1{
   }
 
   #container, .inner{
-    width: 90%;
-    padding: 0 5% 0 5%;
+    width: 60%;
+    padding: 50px 30px;
   }
 
   .span6 {
