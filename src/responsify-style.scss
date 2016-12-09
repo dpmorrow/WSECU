@@ -85,10 +85,21 @@ $line-height: 1.5em;
   margin-left: 0;
 }
 
+@font-face {
+  font-family: dejarip;
+  src: url(assets/dejaweb.woff)
+}
+@font-face {
+  font-family: dejarip-bold;
+  src: url(assets/dejaweb-bold.woff)
+}
+
 body{
   font: {
 	  size: 87.5%;
-	  family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      family: dejarip, sans-serif;
+      style: normal;
+      weight: 400;
   }
   color: #252e35;
   line-height: $line-height;
