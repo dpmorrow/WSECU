@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { UserSearchComponent } from './user-search/user-search.component';
 import { UserSearchResultsComponent } from './user-search/user-search-results/user-search-results.component';
 import { UserSearchResultComponent } from './user-search/user-search-results/user-search-result/user-search-result.component';
+import { UserSearchInputComponent } from './user-search/user-search-input/user-search-input.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserSearchComponent,
     UserSearchResultsComponent,
-    UserSearchResultComponent
+    UserSearchResultComponent,
+    UserSearchInputComponent
   ],
   imports: [
     BrowserModule,
