@@ -24,7 +24,7 @@ describe('UserSearchComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should have users defined', () => {
+  it('should have users declared', () => {
     expect(component.users).toBeTruthy();
   });
 });
