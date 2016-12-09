@@ -1,0 +1,11 @@
+<div class="results-label">Results</div>
+<div class="user-search-result-header">
+    <div class="span12">
+        <span class="span6">Name</span>
+        <span class="span6">Email</span>
+    </div>
+    <hr class="span12">
+</div>
+<ul class="user-search-results">
+  <app-user-search-result *ngFor="let user of users" [user]="user"></app-user-search-result>
+</ul>

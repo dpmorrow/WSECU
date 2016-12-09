@@ -1,0 +1,31 @@
+.user-search-results
+  app-user-search-result
+    &:first-child
+      /deep/ .user-search-result div
+        padding-top: 0
+    &:nth-child(even)
+      /deep/ .user-search-result div
+        background: #f2f2f2
+    &:nth-child(odd)
+      background: #FFF
+
+.results-label
+  font-size: 26px
+  padding: 24px 0
+
+.user-search-result-header
+  font-weight: bold
+  font-size: 17px
+
+hr
+  border: none
+  height: 2px
+  background-color: black
+
+@media screen and (max-width: 600px)
+  .user-search-result-header
+    display: none
+  .results-label
+    padding: 10px 510x
+    text-align: center
+    font-size: 32px
