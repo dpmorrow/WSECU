@@ -28,8 +28,14 @@ export class UserSearchService {
   }
 
   executeSearch(search: string) {
+    search = search.toUpperCase();
     this.searchTermSource.next(search);
 
+    var users = this.rawUsers.filter(u => {
+      return u.name.toUpperCase().includes(search) || u.email.toUpperCase().includes(search);
+    });
+
+    this.userResultsSource.next(users)
     // TODO: DO SEARCH
   }
 }
