@@ -10,8 +10,7 @@ import {Subscription} from "rxjs";
 })
 export class UserSearchComponent implements OnInit {
   users: User[] = [];
-  rawUsers: User[] = [];
-  totalUsers: number;
+  totalUsers: number = 0;
   totalMatchingUsers: number;
   searchTerm: string;
   userResultsSubscription: Subscription;
@@ -21,8 +20,8 @@ export class UserSearchComponent implements OnInit {
   constructor(private userSearchService: UserSearchService) {
     this.userResultsSubscription = userSearchService.userResults$.subscribe(
         userResults => {
-          if(this.rawUsers === [] && (userResults !== [] || userResults.length > 0)) {
-            this.rawUsers = userResults;
+          if(this.totalUsers === 0 && (userResults !== [] || userResults.length > 0)) {
+            this.totalUsers = userResults.length;
           }
           this.users = userResults;
           this.totalMatchingUsers = userResults.length;
