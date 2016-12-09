@@ -1,3 +1,6 @@
-<p>
-  user-search-result works!
-</p>
+<ul>
+  <li *ngFor="let user of users">
+    <div class="user-name">{{ user.name }}</div>
+    <div class="user-email">{{ user.email }}</div>
+  </li>
+</ul>
