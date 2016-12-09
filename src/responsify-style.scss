@@ -133,39 +133,17 @@ header h1{
   letter-spacing: 0.05em;
 }
 
-/* NAVIGATION */
-
-nav{
-  margin: 7px 0 7px 0;
-}
-
-nav ul{
-  text-align: right;
-  overflow: auto;
-  width: 100%;
-}
-
-nav ul li{
-  margin: 0 0 0 0;
-  text-align: center;
-  overflow: auto;
-  float: left;
-  width: 33%;
-}
-
-nav a{
-  text-decoration: none;
-  display: block;
-  padding: 7px 0 7px 5%;
-  margin: 0 0 0 4%;
-  background: rgba(255,255,255,0.1);
-}
-
 /* MEDIA QUERIES */
 
 /* Responsify Defaults */
 
 @media screen and (max-width: 768px){
+
+}
+
+@media screen and (max-width: 600px){
+
+
   nav .span4{
     width: 100%;
   }
@@ -183,24 +161,20 @@ nav a{
     width: 90%;
     padding: 0 5% 0 5%;
   }
-}
 
-@media screen and (max-width: 480px){
-  nav ul li{
+  .span6 {
     width: 100%;
-    margin: 0 0 5px 0;
-  }
-
-  nav a{
-    margin: 0;
-    padding: 14px 0 14px 0;
   }
 }
 
-/* Custom Breakpoints */
+nav ul li{
+  width: 100%;
+  margin: 0 0 5px 0;
+}
 
-@media screen and (max-width: 600px) {
-
+nav a{
+  margin: 0;
+  padding: 14px 0 14px 0;
 }
 
 
