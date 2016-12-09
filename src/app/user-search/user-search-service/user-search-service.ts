@@ -10,7 +10,7 @@ export class UserSearchService {
   private searchTermSource = new Subject<string>();
   private userResultsSource = new Subject<User[]>();
   private rawUsers: User[] = [];
-  private usersUrl = 'http://jsonplaceholder.typicode.com/users';
+  private usersUrl = 'https://jsonplaceholder.typicode.com/users';
 
   searchTerm$: Observable<string> = this.searchTermSource.asObservable();
   userResults$: Observable<User[]> = this.userResultsSource.asObservable();
