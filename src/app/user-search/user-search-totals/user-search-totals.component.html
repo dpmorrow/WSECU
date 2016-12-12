@@ -1,3 +1,3 @@
 <p class="span12 user-search-totals" *ngIf="searchTerm && searchTerm != ''">
-  {{ totalMatchingUsers }} users out of {{ totalUsers }} matched the search term `{{ searchTerm }}`
+  {{ totalMatchingUsers }} user{{ totalMatchingUsers == 1 ? '' : 's' }} out of {{ totalUsers }} matched the search term `{{ searchTerm }}`
 </p>

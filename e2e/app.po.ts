@@ -16,4 +16,20 @@ export class UserSearchPage {
   static getTableHeader() {
     return element(by.css('.user-search-result-header'));
   }
+
+  static getSearchResults() {
+    return element.all(by.css('.user-search-result'));
+  }
+
+  static getSearchTotals() {
+    return element(by.css('.user-search-totals'));
+  }
+
+  static getInput() {
+    return element(by.css('.user-search-input'));
+  }
+
+  static getButton() {
+    return element(by.css('.user-search-button'));
+  }
 }
