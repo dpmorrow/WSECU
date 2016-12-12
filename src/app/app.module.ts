@@ -26,7 +26,7 @@ import { UserSearchTotalsComponent } from './user-search/user-search-totals/user
     HttpModule
   ],
   providers: [
-      UserSearchService
+    { provide: UserSearchService, useClass: UserSearchService },
   ],
   bootstrap: [AppComponent]
 })

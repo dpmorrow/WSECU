@@ -1,9 +1,9 @@
 /* tslint:disable:no-unused-variable */
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { By } from '@angular/platform-browser';
-import { DebugElement } from '@angular/core';
 
 import { UserSearchInputComponent } from './user-search-input.component';
+import {UserSearchService} from "../user-search-service/user-search-service";
+import {UserSearchServiceFake} from "../user-search-service/user-search-service.fake";
 
 describe('UserSearchInputComponent', () => {
   let component: UserSearchInputComponent;
@@ -11,7 +11,10 @@ describe('UserSearchInputComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ UserSearchInputComponent ]
+      declarations: [ UserSearchInputComponent ],
+      providers: [
+          { provide: UserSearchService, useClass: UserSearchServiceFake }
+        ]
     })
     .compileComponents();
   }));
