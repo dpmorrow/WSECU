@@ -26,13 +26,13 @@ export class UserSearchComponent implements OnInit {
           this.users = userResults;
           this.totalMatchingUsers = userResults.length;
         }
-    )
+    );
 
     this.searchTermSubscription = userSearchService.searchTerm$.subscribe(
         searchTerm => {
           this.searchTerm = searchTerm;
         }
-    )
+    );
   }
 
   ngOnInit() {

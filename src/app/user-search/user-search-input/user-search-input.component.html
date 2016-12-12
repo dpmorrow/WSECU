@@ -1,9 +1,9 @@
-<div class="search-term-label">
+<label for="search" class="search-term-label">
   Search Term
-</div>
+</label>
 <div class="span8">
-  <input #search type="text" (keyup.enter)="doSearch(search.value)" class="user-search-input" />
+  <input id="search" #search type="text" (keyup.enter)="doSearch(search.value)" class="user-search-input" />
 </div>
 <div class="span4">
-  <button (click)="doSearch(search.value)">Search</button>
+  <button class="user-search-button" (click)="doSearch(search.value)">Search</button>
 </div>
